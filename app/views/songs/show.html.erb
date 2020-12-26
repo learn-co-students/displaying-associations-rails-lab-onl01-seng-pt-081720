@@ -1,1 +1,5 @@
+<% # NEW WAY %>
 <%= link_to @song.artist.name, artist_path(@song.artist) %>
+
+<% # OLD WAY %>
+<!-- <a href="/artists/<%= @song.artist %>"><%= @song.title %></a> -->
