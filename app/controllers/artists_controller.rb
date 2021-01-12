@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    @artist = Artist.find(params[:id])
+    @artists = Artist.all
   end
 
   def show
@@ -48,5 +48,9 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def song_count
+    @artist.songs.count
   end
 end
